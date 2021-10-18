@@ -20,7 +20,7 @@ app.use(express.json()); // JSON Parser
 app.use(cors());
 
 // Main route
-app.get('/', (req, res) => res.sendFile(path.join(__dirname, 'views/index.html')))
+app.get('/', (req, res) => res.send('okkkk'))
 
 // API routes
 // app.use("/api/usuarios", usersRoutesAPI); // Users
