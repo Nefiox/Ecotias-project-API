@@ -23,8 +23,8 @@ app.use(cors());
 app.get('/', (req, res) => res.sendFile(path.join(__dirname, 'views/index.html')))
 
 // API routes
-app.use("/api/usuarios", usersRoutesAPI); // Users
-app.use("/api/productos", productsRoutesAPI); // Products
+// app.use("/api/usuarios", usersRoutesAPI); // Users
+// app.use("/api/productos", productsRoutesAPI); // Products
 
 // Server
 app.listen(PORT, () => console.log(`Servidor corriendo en el puerto ${PORT}`));
