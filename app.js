@@ -1,4 +1,5 @@
 const express = require("express");
+const path = require('path');
 
 // API routes
 const productsRoutesAPI = require("./routes/productsRoutesAPI");
@@ -17,6 +18,9 @@ app.use(logger());
 app.use(express.urlencoded({ extended: false })); // URL Parser
 app.use(express.json()); // JSON Parser
 app.use(cors());
+
+// Main route
+app.get('/', (req, res) => res.sendFile(path.join(__dirname, 'views/index.html')))
 
 // API routes
 app.use("/api/usuarios", usersRoutesAPI); // Users
