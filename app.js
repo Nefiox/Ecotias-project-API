@@ -4,9 +4,8 @@ const express = require("express");
 const productsRoutesAPI = require("./routes/productsRoutesAPI");
 const usersRoutesAPI = require("./routes/usersRoutesAPI");
 
-const cookies = require("cookie-parser");
 const cors = require("cors");
-// const logger = require('morgan');
+const logger = require('morgan');
 
 // App
 const app = express();
@@ -14,7 +13,7 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 
 // Middlewares
-app.use(cookies()); // Cookies
+app.use(logger());
 app.use(express.urlencoded({ extended: false })); // URL Parser
 app.use(express.json()); // JSON Parser
 app.use(cors());

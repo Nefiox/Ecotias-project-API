@@ -20,27 +20,6 @@ const usersControllerAPI = {
         res.json(respuesta);
       })
       .catch((err) => console.log(err));
-
-    // await db.Usuario.findAll().then((usuario) => {
-    //   let datas = [];
-    //   for (let i = 0; i < usuario.length; i++) {
-    //     let respuesta = {
-    //       id: usuario[i].id,
-    //       name: usuario[i].name,
-    //       last_name: usuario[i].last_name,
-    //       email: usuario[i].email,
-    //       detail: "/api/usuarios/" + usuario[i].id,
-    //     };
-    //     datas.push(respuesta);
-    //   }
-    //   let adata = {
-    //     count: usuario.length,
-    //     url: "/api/usuarios",
-    //     status: 200,
-    //     users: datas,
-    //   };
-    //   res.json(adata);
-    // });
   },
   detalle: async (req, res) => {
     await db.Usuario.findByPk(req.params.id)

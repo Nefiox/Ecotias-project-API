@@ -1,4 +1,4 @@
-const { sequelize, Sequelize } = require("../database/models/");
+const { sequelize } = require("../database/models/");
 let db = require("../database/models/");
 
 const productsControllerAPI = {
